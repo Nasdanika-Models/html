@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="EN">
+  <head>
+    <title>Diagram</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/css/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/themes/default/style.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css@5.1.0/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/styles/default.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.css">
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/common.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/dark-head.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jstree@3.3.11/dist/jstree.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.3.1/build/highlight.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap-vue@2.21.2/dist/bootstrap-vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika/html@master/model/app.gen/web-resources/js/components/table.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/components/table.js"></script><!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-9BRJVLK8CC"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-9BRJVLK8CC');
+</script>    
+
+<script src="../../../search-documents.js"></script>
+
+<script src="https://cdn.jsdelivr.net/gh/olivernn/lunr.js@v2.3.9/lunr.js"></script>
+
+<script>
+// Script for full-text search of JsTree
+
+window.nsdJsTreeSearchCallback = function(str, node) { 
+    var sf = new $.vakata.search(str, true, { caseSensitive : false, fuzzy : false }); 
+    if (sf.search(node.text).isMatch) {
+		return true;
+	} 
+    let searchResult = this.search(str); 
+    for (const sr in searchResult) {
+        if (searchResult[sr].ref === node.original['data-nsd-label-uuid']) {
+            return true;
+        } 
+    } 
+    return false; 
+}.bind(lunr(function () {
+			  this.ref('id');
+			  this.field('title');
+			  this.field('content');
+
+			  for (const key in searchDocuments) {
+				  let doc = searchDocuments[key];
+				this.add({
+					id: doc['action-uuid'],
+					title: doc.title,
+					path: doc.path,
+					content: doc.content
+				});  
+			  }
+			}));
+</script>
+</head>
+  <body>
+    <div class="container-fluid nsd-app-container">
+      <div class="row">
+        <div class="col nsd-app-header">
+          <a href="https://github.com/Nasdanika-Models" data-nsd-label-uuid="a1f901e1-f56b-42a5-8796-93db83605e16" class="nsd-app-header-title">
+            <img src="https://docs.nasdanika.org/images/nasdanika-logo.png" class="nsd-app-label-icon">Nasdanika Models</a>
+          <ul class="nav nsd-app-header-navs">
+            <li class="nav-item">
+              <a href="../../../search.html" data-nsd-label-uuid="0ed0f284-ac84-4847-9331-9e2ab653ba95" class="nav-link"><span class="fas fa-search nsd-app-label-icon"></span>Search</a>
+            </li>
+            <li class="nav-item">
+              <a href="../../../glossary.html" data-nsd-label-uuid="74d63d3e-2650-4707-b7a3-f5f7d6e08f7d" class="nav-link"><span class="fas fa-book nsd-app-label-icon"></span>Glossary</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col nsd-app-navbar">
+          <ul class="navbar navbar-light navbar-expand-lg">
+            <a href="../../../index.html" title="HTML model" data-nsd-label-uuid="b9d7ffb2-d742-4931-ba18-435943a29945" class="navbar-brand">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EPackage.gif" class="nsd-app-label-icon">html</a>
+            <button type="button" data-toggle="collapse" data-target="#nsd_4a" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="nsd_4a" class="collapse navbar-collapse">
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a href="../../../classifiers.html" data-nsd-label-uuid="8043a219-c443-4b9d-8d3a-590aaa8570f7" class="nav-link">Classifiers</a>
+                </li>
+              </ul>
+            </div>
+          </ul>
+        </div>
+      </div>
+      <div class="row nsd-app-content-row">
+        <div class="col nsd-app-navigation-panel">
+          <div class="list-group list-group-flush">
+            <a href="index.html" title="Base class for other HTML and bootstrap elements. " data-nsd-label-uuid="316c58bd-2ff3-4473-91bd-9cbb89769875" class="list-group-item list-group-action active">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"><i>HtmlElement</i></a>
+            <a href="../Page/index.html" title="HTML page. The name attribute is output as title tag in the head.
+
+[Overview video](https://www.youtube.com/watch?v=S28UszI-2g8) - in Russian." data-nsd-label-uuid="3729433b-9653-431d-be81-82ba1d5fa716" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Page</a>
+            <a href="../Script/index.html" title="Script with code stored in the model element ``source`` reference." data-nsd-label-uuid="e8bde523-d738-4f10-8db7-2b4f2e864b58" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Script</a>
+            <a href="../ScriptReference/index.html" title="References external script." data-nsd-label-uuid="9ad5e00d-ceb7-4433-93a7-abb8d25b3be7" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">ScriptReference</a>
+            <a href="../Stylesheet/index.html" title="CSS stylesheet with code stored in the model element ``code`` attribute." data-nsd-label-uuid="73b7282a-a674-4e69-b1d4-4e64a9b9de23" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Stylesheet</a>
+            <a href="../StylesheetReference/index.html" title="Reference to an external stylesheet." data-nsd-label-uuid="9fdd2b31-c05d-4d2b-9d82-af26cfb2d522" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">StylesheetReference</a>
+            <a href="../Tag/index.html" title="HTML Tag" data-nsd-label-uuid="32397374-1e2a-4a40-ae37-e22ff3169d89" class="list-group-item list-group-action">
+              <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon">Tag</a>
+          </div>
+        </div>
+        <div data-nsd-label-uuid="ddbf1e93-7a2b-4fff-976b-b1739f279824" data-nsd-action-uris="uuid:ddbf1e93-7a2b-4fff-976b-b1739f279824" class="col nsd-app-content-panel">
+          <div class="container-fluid">
+            <div class="row nsd-app-content-panel-breadcrumb-row">
+              <div class="col">
+                <nav aria-label="breadcrumb" class="nsd-app-content-panel-breadcrumb">
+                  <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                      <a href="index.html" title="Base class for other HTML and bootstrap elements. " data-nsd-label-uuid="316c58bd-2ff3-4473-91bd-9cbb89769875">
+                        <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif" class="nsd-app-label-icon"><i>HtmlElement</i></a>
+                    </li>
+                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="ddbf1e93-7a2b-4fff-976b-b1739f279824"><span class="fas fa-project-diagram nsd-app-label-icon"></span>Diagram</span>
+                    </li>
+                  </ol>
+                </nav>
+              </div>
+            </div>
+            <div class="row nsd-app-content-panel-title-and-items-row">
+              <div class="col-auto">
+                <h1><span data-nsd-label-uuid="ddbf1e93-7a2b-4fff-976b-b1739f279824" class="nsd-app-content-panel-title"><span class="fas fa-project-diagram nsd-app-label-icon"></span>Diagram</span>
+                </h1>
+              </div>
+            </div>
+            <div class="row nsd-app-content-panel-content-row">
+              <div class="col">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="col"><img src="data:image/png;base64, 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"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
