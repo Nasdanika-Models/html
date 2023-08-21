@@ -172,7 +172,7 @@ public class TestHtmlModelDocGen {
 		String pageTemplateResource = "page-template.yml";
 		URI pageTemplateURI = URI.createFileURI(new File(pageTemplateResource).getAbsolutePath());//.appendFragment("/");
 		
-		String siteMapDomain = "https://gitlab.models.nasdanika.org";		
+		String siteMapDomain = "https://html.models.nasdanika.org";		
 		ActionSiteGenerator actionSiteGenerator = new ActionSiteGenerator() {
 			
 			protected boolean isDeleteOutputPath(String path) {
