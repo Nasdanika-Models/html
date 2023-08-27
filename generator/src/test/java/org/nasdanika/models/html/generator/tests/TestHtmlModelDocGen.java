@@ -102,7 +102,7 @@ public class TestHtmlModelDocGen {
 		
 		WidgetFactory execProcessor = null;
 		Collection<Throwable> resolveFailures = new ArrayList<>();		
-		URI baseActionURI = URI.createURI("https://html.models.nasdanika.org/");
+		URI baseActionURI = URI.createURI("local://html.models.nasdanika.org/");
 		
 		Map<EPackage, URI> packageURIMap = Map.ofEntries(
 			Map.entry(EcorePackage.eINSTANCE, URI.createURI("https://ecore.models.nasdanika.org/")),			
