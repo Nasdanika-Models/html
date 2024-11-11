@@ -1,4 +1,4 @@
-package org.nasdanika.html.model.html.gen;
+package org.nasdanika.models.html.gen;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.nasdanika.common.Context;
@@ -6,7 +6,7 @@ import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.common.Supplier;
 import org.nasdanika.html.HTMLFactory;
 
-public class TagSupplierFactoryAdapter<T extends org.nasdanika.html.model.html.Tag> extends HtmlElementSupplierFactoryAdapter<T, org.nasdanika.html.Tag> {
+public class TagSupplierFactoryAdapter<T extends org.nasdanika.models.html.Tag> extends HtmlElementSupplierFactoryAdapter<T, org.nasdanika.html.Tag> {
 	
 	public TagSupplierFactoryAdapter(T tag, AdapterFactory adapterFactory) {
 		super(tag, adapterFactory);

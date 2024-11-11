@@ -1,4 +1,4 @@
-package org.nasdanika.html.model.html.gen;
+package org.nasdanika.models.html.gen;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +15,7 @@ import org.nasdanika.common.SupplierFactory;
 import org.nasdanika.emf.EObjectAdaptable;
 import org.nasdanika.html.HTMLFactory;
 import org.nasdanika.html.HTMLPage;
-import org.nasdanika.html.model.html.Page;
+import org.nasdanika.models.html.Page;
 
 public class PageSupplierFactoryAdapter extends AdapterImpl implements SupplierFactory<HTMLPage> {
 	

@@ -43,9 +43,9 @@
 			<version>${core.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>${project.groupId}</groupId>
+			<groupId>org.nasdanika.html</groupId>
 			<artifactId>html</artifactId>
-			<version>${project.version}</version>
+			<version>${html.version}</version>
 		</dependency>
 	</dependencies>
 </project>

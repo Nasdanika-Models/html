@@ -1,4 +1,4 @@
-package org.nasdanika.html.model.html.gen;
+package org.nasdanika.models.html.gen;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.nasdanika.common.Consumer;
@@ -7,7 +7,7 @@ import org.nasdanika.common.Context;
 import org.nasdanika.common.FunctionFactory;
 import org.nasdanika.common.ProgressMonitor;
 
-public class HtmlElementConsumerFactoryAdapter<M extends org.nasdanika.html.model.html.HtmlElement, T extends org.nasdanika.html.HTMLElement<?>> extends HtmlElementAdapter<M,T> implements ConsumerFactory<T> {
+public class HtmlElementConsumerFactoryAdapter<M extends org.nasdanika.models.html.HtmlElement, T extends org.nasdanika.html.HTMLElement<?>> extends HtmlElementAdapter<M,T> implements ConsumerFactory<T> {
 	
 	protected HtmlElementConsumerFactoryAdapter(M htmlElement, AdapterFactory adapterFactory) {
 		super(htmlElement, adapterFactory);

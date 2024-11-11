@@ -1,4 +1,4 @@
-package org.nasdanika.html.model.html.gen;
+package org.nasdanika.models.html.gen;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -18,7 +18,7 @@ import org.nasdanika.emf.EObjectAdaptable;
 import org.nasdanika.exec.content.Filter;
 import org.nasdanika.html.HTMLFactory;
 import org.nasdanika.html.TagName;
-import org.nasdanika.html.model.html.Script;
+import org.nasdanika.models.html.Script;
 
 public class ScriptSupplierFactoryAdapter extends AdapterImpl implements SupplierFactory<org.nasdanika.html.Tag> {
 	

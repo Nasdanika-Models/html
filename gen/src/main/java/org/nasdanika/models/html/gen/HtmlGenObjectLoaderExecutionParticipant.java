@@ -1,4 +1,4 @@
-package org.nasdanika.html.model.html.gen;
+package org.nasdanika.models.html.gen;
 
 import java.util.Collection;
 
@@ -7,7 +7,7 @@ import org.eclipse.emf.ecore.resource.ResourceSet;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.exec.util.ExecObjectLoaderExecutionParticipant;
-import org.nasdanika.html.model.html.HtmlPackage;
+import org.nasdanika.models.html.HtmlPackage;
 import org.nasdanika.persistence.ObjectLoaderResourceFactory;
 
 /**

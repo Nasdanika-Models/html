@@ -1,4 +1,4 @@
-package org.nasdanika.html.model.html.gen;
+package org.nasdanika.models.html.gen;
 
 import java.io.InputStream;
 
@@ -7,9 +7,9 @@ import org.nasdanika.common.Util;
 import org.nasdanika.emf.FunctionAdapterFactory;
 import org.nasdanika.exec.gen.ExecutionParticpantAdapterFactory;
 import org.nasdanika.html.HTMLPage;
-import org.nasdanika.html.model.html.HtmlPackage;
-import org.nasdanika.html.model.html.Page;
-import org.nasdanika.html.model.html.Script;
+import org.nasdanika.models.html.HtmlPackage;
+import org.nasdanika.models.html.Page;
+import org.nasdanika.models.html.Script;
 import org.nasdanika.ncore.NcorePackage;
 
 /**
@@ -22,11 +22,11 @@ public class HtmlAdapterFactory extends ExecutionParticpantAdapterFactory {
 		ClassLoader classLoader = getClassLoader();
 		
 		registerAdapterFactory(
-				new FunctionAdapterFactory<SupplierFactory<org.nasdanika.html.Tag>, org.nasdanika.html.model.html.Tag>(
+				new FunctionAdapterFactory<SupplierFactory<org.nasdanika.html.Tag>, org.nasdanika.models.html.Tag>(
 					HtmlPackage.Literals.TAG, 
 					Util.getSupplierFactoryClass(org.nasdanika.html.Tag.class), 
 					classLoader, 
-					e -> new TagSupplierFactoryAdapter<org.nasdanika.html.model.html.Tag>(e, this)));		
+					e -> new TagSupplierFactoryAdapter<org.nasdanika.models.html.Tag>(e, this)));		
 		
 		registerAdapterFactory(
 				new FunctionAdapterFactory<SupplierFactory<HTMLPage>, Page>(

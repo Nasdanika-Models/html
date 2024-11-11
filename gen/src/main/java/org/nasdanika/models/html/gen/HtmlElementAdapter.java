@@ -1,4 +1,4 @@
-package org.nasdanika.html.model.html.gen;
+package org.nasdanika.models.html.gen;
 
 import java.util.List;
 import java.util.Map;
@@ -20,7 +20,7 @@ import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.emf.ComposeableAdapterFactory;
 import org.nasdanika.emf.EObjectAdaptable;
 import org.nasdanika.html.Container;
-import org.nasdanika.html.model.html.HtmlPackage;
+import org.nasdanika.models.html.HtmlPackage;
 
 /**
  * Base class for HTML Element adapters providing common functionality
@@ -29,7 +29,7 @@ import org.nasdanika.html.model.html.HtmlPackage;
  * @param <M>
  * @param <T>
  */
-public abstract class HtmlElementAdapter<M extends org.nasdanika.html.model.html.HtmlElement, T extends org.nasdanika.html.HTMLElement<?>> extends AdapterImpl {
+public abstract class HtmlElementAdapter<M extends org.nasdanika.models.html.HtmlElement, T extends org.nasdanika.html.HTMLElement<?>> extends AdapterImpl {
 		
 	protected AdapterFactory adapterFactory;
 	
