@@ -1,4 +1,4 @@
-package org.nasdanika.html.model.html.tests;
+package org.nasdanika.models.html.tests;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
