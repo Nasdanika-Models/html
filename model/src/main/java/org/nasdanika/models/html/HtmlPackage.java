@@ -43,7 +43,7 @@ public interface HtmlPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "ecore://nasdanika.org/html";
+	String eNS_URI = "ecore://html.models.nasdanika.org";
 
 	/**
 	 * The package namespace name.
