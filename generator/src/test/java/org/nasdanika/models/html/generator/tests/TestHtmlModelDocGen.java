@@ -24,7 +24,7 @@ import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.exec.ExecPackage;
 import org.nasdanika.models.app.Action;
 import org.nasdanika.models.app.gen.AppSiteGenerator;
-import org.nasdanika.html.model.html.HtmlPackage;
+import org.nasdanika.models.html.HtmlPackage;
 import org.nasdanika.models.ecore.graph.processors.EcoreHtmlAppGenerator;
 import org.nasdanika.models.ecore.graph.processors.EcoreNodeProcessorFactory;
 import org.nasdanika.models.html.processors.EcoreGenHtmlProcessorsFactory;
