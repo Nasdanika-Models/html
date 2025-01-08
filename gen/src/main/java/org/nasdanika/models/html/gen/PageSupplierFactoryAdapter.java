@@ -2,12 +2,14 @@ package org.nasdanika.models.html.gen;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.emf.common.notify.impl.AdapterImpl;
 import org.nasdanika.common.CollectionCompoundConsumerFactory;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.Function;
 import org.nasdanika.common.ListCompoundSupplierFactory;
+import org.nasdanika.common.MapCompoundSupplierFactory;
 import org.nasdanika.common.MutableContext;
 import org.nasdanika.common.ProgressMonitor;
 import org.nasdanika.common.Supplier;
@@ -19,8 +21,10 @@ import org.nasdanika.models.html.Page;
 
 public class PageSupplierFactoryAdapter extends AdapterImpl implements SupplierFactory<HTMLPage> {
 	
-	public static final String PAGE_BODY_PROPERTY = "page/body";
+	public static final String PAGE_PROLOG_PROPERTY = "page/prolog";
 	public static final String PAGE_HEAD_PROPERTY = "page/head";
+	public static final String PAGE_BODY_PROPERTY = "page/body";
+	public static final String PAGE_EPILOG_PROPERTY = "page/epilog";
 
 	public PageSupplierFactoryAdapter(Page page) {
 		setTarget(page);
@@ -31,8 +35,8 @@ public class PageSupplierFactoryAdapter extends AdapterImpl implements SupplierF
 		return type == SupplierFactory.class;
 	}
 	
-	protected Function<Supplier.FunctionResult<List<Object>,List<Object>>, HTMLPage> createPageFunction(Context context) {
-		return new Function<Supplier.FunctionResult<List<Object>,List<Object>>, HTMLPage>() {
+	protected Function<Map<PagePart, List<Object>>, HTMLPage> createPageFunction(Context context) {
+		return new Function<Map<PagePart, List<Object>>, HTMLPage>() {
 			
 			@Override
 			public double size() {
@@ -45,7 +49,7 @@ public class PageSupplierFactoryAdapter extends AdapterImpl implements SupplierF
 			}
 			
 			@Override
-			public HTMLPage execute(Supplier.FunctionResult<List<Object>,List<Object>> headAndBody, ProgressMonitor progressMonitor) {
+			public HTMLPage execute(Map<PagePart, List<Object>> pageParts, ProgressMonitor progressMonitor) {
 				HTMLFactory htmlFactory = context.get(HTMLFactory.class, HTMLFactory.INSTANCE);
 				Page semanticElement = (Page) getTarget();
 				String pageName = context.interpolateToString(semanticElement.getName());
@@ -61,11 +65,17 @@ public class PageSupplierFactoryAdapter extends AdapterImpl implements SupplierF
 				for (Object he: headAndBody.argument()) {
 					ret.head(he);
 				}
+				for (Object pe: context.get(PAGE_PROLOG_PROPERTY, List.class)) {
+					ret.prolog(pe);
+				}
 				for (Object he: context.get(PAGE_HEAD_PROPERTY, List.class)) {
 					ret.head(he);
 				}
 				for (Object be: context.get(PAGE_BODY_PROPERTY, List.class)) {
 					ret.body(be);
+				}
+				for (Object ee: context.get(PAGE_EPILOG_PROPERTY, List.class)) {
+					ret.epilog(ee);
 				}
 				for (Object be: headAndBody.result()) {
 					ret.body(be);
@@ -76,16 +86,36 @@ public class PageSupplierFactoryAdapter extends AdapterImpl implements SupplierF
 		
 	}
 	
+	private enum PagePart {
+		prolog,
+		head,
+		body,
+		epilog
+	}
+	
 	@Override
 	public Supplier<HTMLPage> create(Context context) {
 		Page page = (Page) getTarget();
 		MutableContext mc = context.fork();
+		mc.put(PAGE_PROLOG_PROPERTY, new ArrayList<>());
 		mc.put(PAGE_HEAD_PROPERTY, new ArrayList<>());
 		mc.put(PAGE_BODY_PROPERTY, new ArrayList<>());
+		mc.put(PAGE_EPILOG_PROPERTY, new ArrayList<>());
+		ListCompoundSupplierFactory<Object> prologFactory = new ListCompoundSupplierFactory<>("Prolog", EObjectAdaptable.adaptToSupplierFactoryNonNull(page.getProlog(), Object.class));
 		ListCompoundSupplierFactory<Object> headFactory = new ListCompoundSupplierFactory<>("Head", EObjectAdaptable.adaptToSupplierFactoryNonNull(page.getHead(), Object.class));
 		ListCompoundSupplierFactory<Object> bodyFactory = new ListCompoundSupplierFactory<>("Body", EObjectAdaptable.adaptToSupplierFactoryNonNull(page.getBody(), Object.class));		
-		CollectionCompoundConsumerFactory<HTMLPage> buildFactory = new CollectionCompoundConsumerFactory<>("Builders", EObjectAdaptable.adaptToConsumerFactoryNonNull(page.getBuilders(), HTMLPage.class));		
-		return headFactory.then(bodyFactory.asFunctionFactory()).then(this::createPageFunction).then(buildFactory.asFunctionFactory()).create(mc);
+		ListCompoundSupplierFactory<Object> epilogFactory = new ListCompoundSupplierFactory<>("Epilog", EObjectAdaptable.adaptToSupplierFactoryNonNull(page.getEpilog(), Object.class));
+		CollectionCompoundConsumerFactory<HTMLPage> buildFactory = new CollectionCompoundConsumerFactory<>("Builders", EObjectAdaptable.adaptToConsumerFactoryNonNull(page.getBuilders(), HTMLPage.class));
+		
+		MapCompoundSupplierFactory<PagePart, List<Object>> partsFactory = new MapCompoundSupplierFactory<>("Page parts");
+		partsFactory.put(PagePart.prolog, prologFactory);
+		partsFactory.put(PagePart.head, headFactory);
+		partsFactory.put(PagePart.body, bodyFactory);
+		partsFactory.put(PagePart.epilog, epilogFactory);
+		
+		return partsFactory
+			.then(this::createPageFunction)
+			.then(buildFactory.asFunctionFactory()).create(mc);
 	}	
 
 }

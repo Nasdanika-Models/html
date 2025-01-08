@@ -25,8 +25,10 @@ import org.nasdanika.ncore.impl.ModelElementImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link org.nasdanika.models.html.impl.PageImpl#getProlog <em>Prolog</em>}</li>
  *   <li>{@link org.nasdanika.models.html.impl.PageImpl#getHead <em>Head</em>}</li>
  *   <li>{@link org.nasdanika.models.html.impl.PageImpl#getBody <em>Body</em>}</li>
+ *   <li>{@link org.nasdanika.models.html.impl.PageImpl#getEpilog <em>Epilog</em>}</li>
  *   <li>{@link org.nasdanika.models.html.impl.PageImpl#getBuilders <em>Builders</em>}</li>
  *   <li>{@link org.nasdanika.models.html.impl.PageImpl#getLanguage <em>Language</em>}</li>
  *   <li>{@link org.nasdanika.models.html.impl.PageImpl#getName <em>Name</em>}</li>
@@ -83,6 +85,17 @@ public class PageImpl extends ModelElementImpl implements Page {
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
+	public EList<EObject> getProlog() {
+		return (EList<EObject>)eDynamicGet(HtmlPackage.PAGE__PROLOG, HtmlPackage.Literals.PAGE__PROLOG, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
 	public EList<EObject> getHead() {
 		return (EList<EObject>)eDynamicGet(HtmlPackage.PAGE__HEAD, HtmlPackage.Literals.PAGE__HEAD, true, true);
 	}
@@ -96,6 +109,17 @@ public class PageImpl extends ModelElementImpl implements Page {
 	@Override
 	public EList<EObject> getBody() {
 		return (EList<EObject>)eDynamicGet(HtmlPackage.PAGE__BODY, HtmlPackage.Literals.PAGE__BODY, true, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public EList<EObject> getEpilog() {
+		return (EList<EObject>)eDynamicGet(HtmlPackage.PAGE__EPILOG, HtmlPackage.Literals.PAGE__EPILOG, true, true);
 	}
 
 	/**
@@ -179,10 +203,14 @@ public class PageImpl extends ModelElementImpl implements Page {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+			case HtmlPackage.PAGE__PROLOG:
+				return ((InternalEList<?>)getProlog()).basicRemove(otherEnd, msgs);
 			case HtmlPackage.PAGE__HEAD:
 				return ((InternalEList<?>)getHead()).basicRemove(otherEnd, msgs);
 			case HtmlPackage.PAGE__BODY:
 				return ((InternalEList<?>)getBody()).basicRemove(otherEnd, msgs);
+			case HtmlPackage.PAGE__EPILOG:
+				return ((InternalEList<?>)getEpilog()).basicRemove(otherEnd, msgs);
 			case HtmlPackage.PAGE__BUILDERS:
 				return ((InternalEList<?>)getBuilders()).basicRemove(otherEnd, msgs);
 		}
@@ -197,10 +225,14 @@ public class PageImpl extends ModelElementImpl implements Page {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+			case HtmlPackage.PAGE__PROLOG:
+				return getProlog();
 			case HtmlPackage.PAGE__HEAD:
 				return getHead();
 			case HtmlPackage.PAGE__BODY:
 				return getBody();
+			case HtmlPackage.PAGE__EPILOG:
+				return getEpilog();
 			case HtmlPackage.PAGE__BUILDERS:
 				return getBuilders();
 			case HtmlPackage.PAGE__LANGUAGE:
@@ -224,6 +256,10 @@ public class PageImpl extends ModelElementImpl implements Page {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+			case HtmlPackage.PAGE__PROLOG:
+				getProlog().clear();
+				getProlog().addAll((Collection<? extends EObject>)newValue);
+				return;
 			case HtmlPackage.PAGE__HEAD:
 				getHead().clear();
 				getHead().addAll((Collection<? extends EObject>)newValue);
@@ -231,6 +267,10 @@ public class PageImpl extends ModelElementImpl implements Page {
 			case HtmlPackage.PAGE__BODY:
 				getBody().clear();
 				getBody().addAll((Collection<? extends EObject>)newValue);
+				return;
+			case HtmlPackage.PAGE__EPILOG:
+				getEpilog().clear();
+				getEpilog().addAll((Collection<? extends EObject>)newValue);
 				return;
 			case HtmlPackage.PAGE__BUILDERS:
 				getBuilders().clear();
@@ -262,11 +302,17 @@ public class PageImpl extends ModelElementImpl implements Page {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+			case HtmlPackage.PAGE__PROLOG:
+				getProlog().clear();
+				return;
 			case HtmlPackage.PAGE__HEAD:
 				getHead().clear();
 				return;
 			case HtmlPackage.PAGE__BODY:
 				getBody().clear();
+				return;
+			case HtmlPackage.PAGE__EPILOG:
+				getEpilog().clear();
 				return;
 			case HtmlPackage.PAGE__BUILDERS:
 				getBuilders().clear();
@@ -295,10 +341,14 @@ public class PageImpl extends ModelElementImpl implements Page {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+			case HtmlPackage.PAGE__PROLOG:
+				return !getProlog().isEmpty();
 			case HtmlPackage.PAGE__HEAD:
 				return !getHead().isEmpty();
 			case HtmlPackage.PAGE__BODY:
 				return !getBody().isEmpty();
+			case HtmlPackage.PAGE__EPILOG:
+				return !getEpilog().isEmpty();
 			case HtmlPackage.PAGE__BUILDERS:
 				return !getBuilders().isEmpty();
 			case HtmlPackage.PAGE__LANGUAGE:

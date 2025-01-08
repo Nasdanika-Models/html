@@ -222,7 +222,7 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPage_Head() {
+	public EReference getPage_Prolog() {
 		return (EReference)pageEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -232,7 +232,7 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPage_Body() {
+	public EReference getPage_Head() {
 		return (EReference)pageEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -242,7 +242,7 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getPage_Builders() {
+	public EReference getPage_Body() {
 		return (EReference)pageEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -252,27 +252,27 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getPage_Epilog() {
+		return (EReference)pageEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getPage_Builders() {
+		return (EReference)pageEClass.getEStructuralFeatures().get(4);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EAttribute getPage_Language() {
-		return (EAttribute)pageEClass.getEStructuralFeatures().get(3);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getPage_Name() {
-		return (EAttribute)pageEClass.getEStructuralFeatures().get(4);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public EAttribute getPage_Stylesheets() {
 		return (EAttribute)pageEClass.getEStructuralFeatures().get(5);
 	}
 
@@ -282,8 +282,28 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getPage_Scripts() {
+	public EAttribute getPage_Name() {
 		return (EAttribute)pageEClass.getEStructuralFeatures().get(6);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPage_Stylesheets() {
+		return (EAttribute)pageEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EAttribute getPage_Scripts() {
+		return (EAttribute)pageEClass.getEStructuralFeatures().get(8);
 	}
 
 	/**
@@ -383,8 +403,10 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 		createEAttribute(tagEClass, TAG__NAME);
 
 		pageEClass = createEClass(PAGE);
+		createEReference(pageEClass, PAGE__PROLOG);
 		createEReference(pageEClass, PAGE__HEAD);
 		createEReference(pageEClass, PAGE__BODY);
+		createEReference(pageEClass, PAGE__EPILOG);
 		createEReference(pageEClass, PAGE__BUILDERS);
 		createEAttribute(pageEClass, PAGE__LANGUAGE);
 		createEAttribute(pageEClass, PAGE__NAME);
@@ -452,8 +474,10 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 		initEAttribute(getTag_Name(), ecorePackage.getEString(), "name", "div", 0, 1, Tag.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(pageEClass, Page.class, "Page", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPage_Prolog(), ecorePackage.getEObject(), null, "prolog", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPage_Head(), ecorePackage.getEObject(), null, "head", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPage_Body(), ecorePackage.getEObject(), null, "body", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPage_Epilog(), ecorePackage.getEObject(), null, "epilog", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getPage_Builders(), ecorePackage.getEObject(), null, "builders", null, 0, -1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPage_Language(), ecorePackage.getEString(), "language", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getPage_Name(), ecorePackage.getEString(), "name", null, 0, 1, Page.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -533,6 +557,12 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 			   "documentation", "HTML page. The name attribute is output as title tag in the head.\n\n[Overview video](https://www.youtube.com/watch?v=S28UszI-2g8) - in Russian."
 		   });
 		addAnnotation
+		  (getPage_Prolog(),
+		   source,
+		   new String[] {
+			   "documentation", "Head content."
+		   });
+		addAnnotation
 		  (getPage_Head(),
 		   source,
 		   new String[] {
@@ -543,6 +573,12 @@ public class HtmlPackageImpl extends EPackageImpl implements HtmlPackage {
 		   source,
 		   new String[] {
 			   "documentation", "Body content."
+		   });
+		addAnnotation
+		  (getPage_Epilog(),
+		   source,
+		   new String[] {
+			   "documentation", "Head content."
 		   });
 		addAnnotation
 		  (getPage_Builders(),

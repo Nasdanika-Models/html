@@ -362,13 +362,22 @@ public interface HtmlPackage extends EPackage {
 	int PAGE__ANNOTATIONS = NcorePackage.MODEL_ELEMENT__ANNOTATIONS;
 
 	/**
+	 * The feature id for the '<em><b>Prolog</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAGE__PROLOG = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
+
+	/**
 	 * The feature id for the '<em><b>Head</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__HEAD = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 0;
+	int PAGE__HEAD = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Body</b></em>' containment reference list.
@@ -377,7 +386,16 @@ public interface HtmlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__BODY = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 1;
+	int PAGE__BODY = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Epilog</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PAGE__EPILOG = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Builders</b></em>' containment reference list.
@@ -386,7 +404,7 @@ public interface HtmlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__BUILDERS = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 2;
+	int PAGE__BUILDERS = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 4;
 
 	/**
 	 * The feature id for the '<em><b>Language</b></em>' attribute.
@@ -395,7 +413,7 @@ public interface HtmlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__LANGUAGE = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 3;
+	int PAGE__LANGUAGE = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 5;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -404,7 +422,7 @@ public interface HtmlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__NAME = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 4;
+	int PAGE__NAME = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 6;
 
 	/**
 	 * The feature id for the '<em><b>Stylesheets</b></em>' attribute list.
@@ -413,7 +431,7 @@ public interface HtmlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__STYLESHEETS = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 5;
+	int PAGE__STYLESHEETS = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 7;
 
 	/**
 	 * The feature id for the '<em><b>Scripts</b></em>' attribute list.
@@ -422,7 +440,7 @@ public interface HtmlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE__SCRIPTS = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 6;
+	int PAGE__SCRIPTS = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 8;
 
 	/**
 	 * The number of structural features of the '<em>Page</em>' class.
@@ -431,7 +449,7 @@ public interface HtmlPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PAGE_FEATURE_COUNT = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 7;
+	int PAGE_FEATURE_COUNT = NcorePackage.MODEL_ELEMENT_FEATURE_COUNT + 9;
 
 	/**
 	 * The number of operations of the '<em>Page</em>' class.
@@ -907,6 +925,17 @@ public interface HtmlPackage extends EPackage {
 	EClass getPage();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.html.Page#getProlog <em>Prolog</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Prolog</em>'.
+	 * @see org.nasdanika.models.html.Page#getProlog()
+	 * @see #getPage()
+	 * @generated
+	 */
+	EReference getPage_Prolog();
+
+	/**
 	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.html.Page#getHead <em>Head</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -927,6 +956,17 @@ public interface HtmlPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPage_Body();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.html.Page#getEpilog <em>Epilog</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Epilog</em>'.
+	 * @see org.nasdanika.models.html.Page#getEpilog()
+	 * @see #getPage()
+	 * @generated
+	 */
+	EReference getPage_Epilog();
 
 	/**
 	 * Returns the meta object for the containment reference list '{@link org.nasdanika.models.html.Page#getBuilders <em>Builders</em>}'.
@@ -1123,6 +1163,14 @@ public interface HtmlPackage extends EPackage {
 		EClass PAGE = eINSTANCE.getPage();
 
 		/**
+		 * The meta object literal for the '<em><b>Prolog</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PAGE__PROLOG = eINSTANCE.getPage_Prolog();
+
+		/**
 		 * The meta object literal for the '<em><b>Head</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -1137,6 +1185,14 @@ public interface HtmlPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PAGE__BODY = eINSTANCE.getPage_Body();
+
+		/**
+		 * The meta object literal for the '<em><b>Epilog</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PAGE__EPILOG = eINSTANCE.getPage_Epilog();
 
 		/**
 		 * The meta object literal for the '<em><b>Builders</b></em>' containment reference list feature.

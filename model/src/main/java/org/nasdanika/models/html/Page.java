@@ -22,8 +22,10 @@ import org.nasdanika.ncore.ModelElement;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link org.nasdanika.models.html.Page#getProlog <em>Prolog</em>}</li>
  *   <li>{@link org.nasdanika.models.html.Page#getHead <em>Head</em>}</li>
  *   <li>{@link org.nasdanika.models.html.Page#getBody <em>Body</em>}</li>
+ *   <li>{@link org.nasdanika.models.html.Page#getEpilog <em>Epilog</em>}</li>
  *   <li>{@link org.nasdanika.models.html.Page#getBuilders <em>Builders</em>}</li>
  *   <li>{@link org.nasdanika.models.html.Page#getLanguage <em>Language</em>}</li>
  *   <li>{@link org.nasdanika.models.html.Page#getName <em>Name</em>}</li>
@@ -36,6 +38,21 @@ import org.nasdanika.ncore.ModelElement;
  * @generated
  */
 public interface Page extends ModelElement {
+	/**
+	 * Returns the value of the '<em><b>Prolog</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Head content.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Prolog</em>' containment reference list.
+	 * @see org.nasdanika.models.html.HtmlPackage#getPage_Prolog()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<EObject> getProlog();
+
 	/**
 	 * Returns the value of the '<em><b>Head</b></em>' containment reference list.
 	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
@@ -65,6 +82,21 @@ public interface Page extends ModelElement {
 	 * @generated
 	 */
 	EList<EObject> getBody();
+
+	/**
+	 * Returns the value of the '<em><b>Epilog</b></em>' containment reference list.
+	 * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * <!-- begin-model-doc -->
+	 * Head content.
+	 * <!-- end-model-doc -->
+	 * @return the value of the '<em>Epilog</em>' containment reference list.
+	 * @see org.nasdanika.models.html.HtmlPackage#getPage_Epilog()
+	 * @model containment="true"
+	 * @generated
+	 */
+	EList<EObject> getEpilog();
 
 	/**
 	 * Returns the value of the '<em><b>Builders</b></em>' containment reference list.
