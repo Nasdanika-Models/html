@@ -34,6 +34,7 @@ public class TestPage extends TestBase {
 		HTMLPage page = (HTMLPage) obj;
 		assertThat(page.toString()).contains(H1_HELLO);		
 		assertThat(page.toString()).contains(H1_HELLO);		
+		System.out.println(page);
 	}
 	
 	@Test

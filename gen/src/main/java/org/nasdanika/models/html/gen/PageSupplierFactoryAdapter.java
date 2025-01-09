@@ -62,23 +62,33 @@ public class PageSupplierFactoryAdapter extends AdapterImpl implements SupplierF
 				for (String script: semanticElement.getScripts()) {
 					ret.script(script);
 				}				
-				for (Object he: headAndBody.argument()) {
-					ret.head(he);
+				
+				for (Object prologElement: context.get(PAGE_PROLOG_PROPERTY, List.class)) {
+					ret.prolog(prologElement);
 				}
-				for (Object pe: context.get(PAGE_PROLOG_PROPERTY, List.class)) {
-					ret.prolog(pe);
+				for (Object prologElement: pageParts.get(PagePart.prolog)) {
+					ret.prolog(prologElement);
 				}
-				for (Object he: context.get(PAGE_HEAD_PROPERTY, List.class)) {
-					ret.head(he);
+				
+				for (Object headElement: context.get(PAGE_HEAD_PROPERTY, List.class)) {
+					ret.head(headElement);
 				}
-				for (Object be: context.get(PAGE_BODY_PROPERTY, List.class)) {
-					ret.body(be);
+				for (Object headElement: pageParts.get(PagePart.head)) {
+					ret.head(headElement);
 				}
-				for (Object ee: context.get(PAGE_EPILOG_PROPERTY, List.class)) {
-					ret.epilog(ee);
+				
+				for (Object bodyElement: context.get(PAGE_BODY_PROPERTY, List.class)) {
+					ret.body(bodyElement);
 				}
-				for (Object be: headAndBody.result()) {
-					ret.body(be);
+				for (Object bodyElement: pageParts.get(PagePart.body)) {
+					ret.body(bodyElement);
+				}
+				
+				for (Object epilogElement: context.get(PAGE_EPILOG_PROPERTY, List.class)) {
+					ret.epilog(epilogElement);
+				}
+				for (Object epilogElement: pageParts.get(PagePart.epilog)) {
+					ret.epilog(epilogElement);
 				}
 				return ret;
 			}
@@ -86,7 +96,7 @@ public class PageSupplierFactoryAdapter extends AdapterImpl implements SupplierF
 		
 	}
 	
-	private enum PagePart {
+	public static enum PagePart {
 		prolog,
 		head,
 		body,
@@ -101,16 +111,20 @@ public class PageSupplierFactoryAdapter extends AdapterImpl implements SupplierF
 		mc.put(PAGE_HEAD_PROPERTY, new ArrayList<>());
 		mc.put(PAGE_BODY_PROPERTY, new ArrayList<>());
 		mc.put(PAGE_EPILOG_PROPERTY, new ArrayList<>());
-		ListCompoundSupplierFactory<Object> prologFactory = new ListCompoundSupplierFactory<>("Prolog", EObjectAdaptable.adaptToSupplierFactoryNonNull(page.getProlog(), Object.class));
-		ListCompoundSupplierFactory<Object> headFactory = new ListCompoundSupplierFactory<>("Head", EObjectAdaptable.adaptToSupplierFactoryNonNull(page.getHead(), Object.class));
-		ListCompoundSupplierFactory<Object> bodyFactory = new ListCompoundSupplierFactory<>("Body", EObjectAdaptable.adaptToSupplierFactoryNonNull(page.getBody(), Object.class));		
-		ListCompoundSupplierFactory<Object> epilogFactory = new ListCompoundSupplierFactory<>("Epilog", EObjectAdaptable.adaptToSupplierFactoryNonNull(page.getEpilog(), Object.class));
 		CollectionCompoundConsumerFactory<HTMLPage> buildFactory = new CollectionCompoundConsumerFactory<>("Builders", EObjectAdaptable.adaptToConsumerFactoryNonNull(page.getBuilders(), HTMLPage.class));
 		
 		MapCompoundSupplierFactory<PagePart, List<Object>> partsFactory = new MapCompoundSupplierFactory<>("Page parts");
+		
+		ListCompoundSupplierFactory<Object> prologFactory = new ListCompoundSupplierFactory<>("Prolog", EObjectAdaptable.adaptToSupplierFactoryNonNull(page.getProlog(), Object.class));
 		partsFactory.put(PagePart.prolog, prologFactory);
+		
+		ListCompoundSupplierFactory<Object> headFactory = new ListCompoundSupplierFactory<>("Head", EObjectAdaptable.adaptToSupplierFactoryNonNull(page.getHead(), Object.class));
 		partsFactory.put(PagePart.head, headFactory);
+		
+		ListCompoundSupplierFactory<Object> bodyFactory = new ListCompoundSupplierFactory<>("Body", EObjectAdaptable.adaptToSupplierFactoryNonNull(page.getBody(), Object.class));		
 		partsFactory.put(PagePart.body, bodyFactory);
+		
+		ListCompoundSupplierFactory<Object> epilogFactory = new ListCompoundSupplierFactory<>("Epilog", EObjectAdaptable.adaptToSupplierFactoryNonNull(page.getEpilog(), Object.class));
 		partsFactory.put(PagePart.epilog, epilogFactory);
 		
 		return partsFactory
