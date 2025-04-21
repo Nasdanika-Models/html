@@ -1,0 +1,168 @@
+{
+  "references/eClassifiers/Script/inheritance.html": {
+    "path": "Script/Inheritance",
+    "link-uuid": "814f16af-225c-40c6-9acb-bd979d1a5895",
+    "title": "Inheritance",
+    "content": "Supertypes "
+  },
+  "references/eClassifiers/Page/references/eStructuralFeatures/prolog/index.html": {
+    "path": "Page/References/prolog",
+    "link-uuid": "0ad61304-0dd2-4238-944e-e50d11d00aa4",
+    "title": "prolog",
+    "content": "Type EObject Multiplicity 0..* Head content."
+  },
+  "references/eClassifiers/ScriptReference/index.html": {
+    "link-uuid": "dc8409ed-a01c-4a51-8695-93aebabe4d49",
+    "title": "ScriptReference",
+    "content": "References external script."
+  },
+  "references/eClassifiers/HtmlElement/index.html": {
+    "link-uuid": "66d1866e-2a34-4c43-ae03-864d380c43e2",
+    "title": "HtmlElement",
+    "content": "Base class for other HTML and bootstrap elements."
+  },
+  "references/eClassifiers/HtmlElement/references/eStructuralFeatures/attributes/index.html": {
+    "path": "HtmlElement/References/attributes",
+    "link-uuid": "5ca436d8-3929-45f7-b078-0980eeda0bb1",
+    "title": "attributes",
+    "content": "Type Property Multiplicity 0..* Tag attributes. Interpolation Attribute values are interpolated, i.e. tokens in the form of default value] are replaced with the contextual values or default values, if any. Examples: ${my-style} - Token without a default value. bold - Token with a default value. Regular attributes For all top-level entries except class, style, and data attribute value is produced by converting the value to string for scalars and to JSON string for lists and maps. For attributes which do not start with data- a warning is issued if the value is not a scalar, i.e. a list or a map. Class For class attribute its value is formed by concantenating elements using space as a separator. If elements are hierarchical then class name is formed by concatenation with a dash (-) as a separator. Data If value of data attbibute is a map then keys of that map get concatenated with data using dash (-) as a separator, them same applies to nested maps. Non-map values become attribute values - scalars are converted to string, lists are converted to JSON string. Style Style can be defined as a string, list or map. If style is defined as a list, all list values are concatenated with a space as a separator - it is a convent way for long unstructured definitions. If style value is a map then the value and its contained map values are processed in the following fashion: Keys are concatenated with dash as a separator. List values are contcatenated wtih space as a separator."
+  },
+  "references/eClassifiers/Page/inheritance.html": {
+    "path": "Page/Inheritance",
+    "link-uuid": "081f2437-10c0-4f84-aa18-7a851c909825",
+    "title": "Inheritance",
+    "content": "Supertypes "
+  },
+  "references/eClassifiers/StylesheetReference/references/eStructuralFeatures/target/index.html": {
+    "path": "StylesheetReference/Attributes/target",
+    "link-uuid": "45768441-226e-4daa-bf8f-fa0537d90ab1",
+    "title": "target",
+    "content": "Type EString Multiplicity 1 Stylesheet URL."
+  },
+  "references/eClassifiers/HtmlElement/references/eStructuralFeatures/content/index.html": {
+    "path": "HtmlElement/References/content",
+    "link-uuid": "a5aab55b-556b-4469-bcda-8a08cf0740f3",
+    "title": "content",
+    "content": "Type EObject Multiplicity 0..* Container content. Content elements are adapted to ${javadoc/org.nasdanika.common.SupplierFactory} for generation of HTML content."
+  },
+  "references/eClassifiers/Page/references/eStructuralFeatures/epilog/index.html": {
+    "path": "Page/References/epilog",
+    "link-uuid": "05c51b2c-d522-4590-ad3f-e09f484c3c13",
+    "title": "epilog",
+    "content": "Type EObject Multiplicity 0..* Head content."
+  },
+  "references/eClassifiers/Tag/inheritance.html": {
+    "path": "Tag/Inheritance",
+    "link-uuid": "27d03d5d-b060-4bce-af7b-c3105be07879",
+    "title": "Inheritance",
+    "content": "Supertypes "
+  },
+  "references/eClassifiers/Page/references/eStructuralFeatures/language/index.html": {
+    "path": "Page/Attributes/language",
+    "link-uuid": "d3d54265-c41c-4296-a30a-3d93925a5100",
+    "title": "language",
+    "content": "Type EString Multiplicity 0..1 Page language - lang attribute."
+  },
+  "references/eClassifiers/Stylesheet/inheritance.html": {
+    "path": "Stylesheet/Inheritance",
+    "link-uuid": "e2780c46-47ed-44dc-96ee-bf75d6fb993c",
+    "title": "Inheritance",
+    "content": "Supertypes "
+  },
+  "references/eClassifiers/Script/index.html": {
+    "link-uuid": "62381d1e-8be0-4b05-a922-ddff00e48711",
+    "title": "Script",
+    "content": "Script with code stored in the model element source reference."
+  },
+  "references/eClassifiers/ScriptReference/references/eStructuralFeatures/src/index.html": {
+    "path": "ScriptReference/Attributes/src",
+    "link-uuid": "bbab0988-347b-46b3-9668-b820c1faf87c",
+    "title": "src",
+    "content": "Type EString Multiplicity 1 Script URL."
+  },
+  "index.html": {
+    "link-uuid": "0efef8af-2dcb-4486-8f0e-947a2add5391",
+    "title": "html",
+    "content": "HTML model"
+  },
+  "references/eClassifiers/Tag/references/eStructuralFeatures/name/index.html": {
+    "path": "Tag/Attributes/name",
+    "link-uuid": "33a65e03-3e83-45ec-ad28-eb61e42d023d",
+    "title": "name",
+    "content": "Type EString Multiplicity 0..1 Tag name."
+  },
+  "references/eClassifiers/Stylesheet/index.html": {
+    "link-uuid": "78c4ae5a-d433-434a-8d49-657520371a57",
+    "title": "Stylesheet",
+    "content": "CSS stylesheet with code stored in the model element code attribute."
+  },
+  "references/eClassifiers/Page/references/eStructuralFeatures/body/index.html": {
+    "path": "Page/References/body",
+    "link-uuid": "2d115485-1d33-4e6b-ab0a-feb7c3f332b5",
+    "title": "body",
+    "content": "Type EObject Multiplicity 0..* Body content."
+  },
+  "references/eClassifiers/StylesheetReference/inheritance.html": {
+    "path": "StylesheetReference/Inheritance",
+    "link-uuid": "8591b6cc-658c-4782-8b94-d752bce7c4a2",
+    "title": "Inheritance",
+    "content": "Supertypes "
+  },
+  "references/eClassifiers/Page/references/eStructuralFeatures/builders/index.html": {
+    "path": "Page/References/builders",
+    "link-uuid": "e23971b4-cf7d-407e-92fb-18a107586990",
+    "title": "builders",
+    "content": "Type EObject Multiplicity 0..* Builders operate on an instance of org.nasdanika.html.HTMLPage created by the the page element. Builders shall be adaptable to org.nasdanika.common.Consumer."
+  },
+  "references/eClassifiers/ScriptReference/inheritance.html": {
+    "path": "ScriptReference/Inheritance",
+    "link-uuid": "2a62c8b2-0a15-4c68-80e4-f0f315dc8fd5",
+    "title": "Inheritance",
+    "content": "Supertypes "
+  },
+  "references/eClassifiers/StylesheetReference/index.html": {
+    "link-uuid": "517b6495-c8f2-4173-b392-61271516c51c",
+    "title": "StylesheetReference",
+    "content": "Reference to an external stylesheet."
+  },
+  "references/eClassifiers/Page/index.html": {
+    "link-uuid": "f54497f6-018b-4936-a4a5-e9b16590e4c4",
+    "title": "Page",
+    "content": "HTML page. The name attribute is output as title tag in the head. Overview video - in Russian."
+  },
+  "references/eClassifiers/Page/references/eStructuralFeatures/stylesheets/index.html": {
+    "path": "Page/Attributes/stylesheets",
+    "link-uuid": "ec354653-182d-49ab-9cf8-5d8c56b23d61",
+    "title": "stylesheets",
+    "content": "Type EString Multiplicity 0..* Stylesheet URL&rsquo;s"
+  },
+  "references/eClassifiers/Tag/index.html": {
+    "link-uuid": "91704c85-ada8-4ca4-b389-4476c09185f8",
+    "title": "Tag",
+    "content": "HTML Tag"
+  },
+  "references/eClassifiers/Page/references/eStructuralFeatures/head/index.html": {
+    "path": "Page/References/head",
+    "link-uuid": "b75b09ff-b6e4-4af2-9a50-816e152e9a95",
+    "title": "head",
+    "content": "Type EObject Multiplicity 0..* Head content."
+  },
+  "references/eClassifiers/Page/references/eStructuralFeatures/name/index.html": {
+    "path": "Page/Attributes/name",
+    "link-uuid": "546aee7c-50a5-4a44-b0d1-54b7233ca9ee",
+    "title": "name",
+    "content": "Type EString Multiplicity 0..1"
+  },
+  "references/eClassifiers/Page/references/eStructuralFeatures/scripts/index.html": {
+    "path": "Page/Attributes/scripts",
+    "link-uuid": "4198c558-fcdf-4179-ab37-af385c2af8ee",
+    "title": "scripts",
+    "content": "Type EString Multiplicity 0..* Script URL&rsquo;s"
+  },
+  "references/eClassifiers/HtmlElement/inheritance.html": {
+    "path": "HtmlElement/Inheritance",
+    "link-uuid": "1b963570-7cab-4040-aff0-6cb0377898c3",
+    "title": "Inheritance",
+    "content": "Supertypes Subtypes  "
+  }
+}
