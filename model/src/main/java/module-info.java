@@ -3,7 +3,6 @@ import org.nasdanika.models.html.util.HtmlEPackageResourceSetCapabilityFactory;
 
 module org.nasdanika.models.html {
 		
-	requires transitive org.nasdanika.html;
 	requires transitive org.nasdanika.exec;
 	
 	exports org.nasdanika.models.html;

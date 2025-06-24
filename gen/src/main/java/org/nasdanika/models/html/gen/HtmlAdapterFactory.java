@@ -12,10 +12,6 @@ import org.nasdanika.models.html.Page;
 import org.nasdanika.models.html.Script;
 import org.nasdanika.ncore.NcorePackage;
 
-/**
- * Provides adapters for the Engineering model elements.
- * @author Pavel
- */
 public class HtmlAdapterFactory extends ExecutionParticpantAdapterFactory {
 	
 	public HtmlAdapterFactory() {

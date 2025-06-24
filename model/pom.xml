@@ -42,10 +42,5 @@
 			<artifactId>exec</artifactId>
 			<version>${core.version}</version>
 		</dependency>
-		<dependency>
-			<groupId>org.nasdanika.html</groupId>
-			<artifactId>html</artifactId>
-			<version>${html.version}</version>
-		</dependency>
 	</dependencies>
 </project>
