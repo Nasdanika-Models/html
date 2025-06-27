@@ -154,6 +154,7 @@
 		<module>model</module>
 		<module>gen</module>
 		<module>alpinejs</module>
+		<module>producer</module>
 	</modules>
 	 <profiles>
 		<profile>
