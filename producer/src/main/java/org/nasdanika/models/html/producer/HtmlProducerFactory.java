@@ -29,7 +29,7 @@ public class HtmlProducerFactory {
 	}
 
 	@org.nasdanika.common.Transformer.Factory
-	public final Producer<Object> createPageProducer(
+	public final Producer<String> createPageProducer(
 			org.nasdanika.models.html.Page page,
 			boolean parallel,
 			BiConsumer<EObject, BiConsumer<Producer<Object>,ProgressMonitor>> elementProvider, 
