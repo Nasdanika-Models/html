@@ -13,7 +13,7 @@ import reactor.core.publisher.Mono;
 
 public class PageProducer implements Producer<String> {
 	
-	private org.nasdanika.html.HTMLPage delegate;	
+	protected org.nasdanika.html.HTMLPage delegate;	
 
 	public PageProducer(
 			Context context, 
@@ -40,16 +40,15 @@ public class PageProducer implements Producer<String> {
 		}
 		
 		for (EObject be: page.getBody()) {
-		delegate.body(TagProducer.createProxyProducer(be, elementProvider));
+			delegate.body(TagProducer.createProxyProducer(be, elementProvider));
 		}
 		
 		for (EObject ee: page.getEpilog()) {
-		delegate.epilog(TagProducer.createProxyProducer(ee, elementProvider));
+			delegate.epilog(TagProducer.createProxyProducer(ee, elementProvider));
 		}
 		
 		for (EObject builder: page.getProlog()) {
-			// A trick - a producer which doesn't produce anything, but implements Consumer to pass the page to it.
-			throw new UnsupportedOperationException("Builders are not supported yet: " + builder);
+			elementProvider.accept(builder, (b, pm) -> b.build(delegate));
 		}
 	}
 
