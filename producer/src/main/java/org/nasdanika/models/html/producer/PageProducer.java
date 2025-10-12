@@ -5,6 +5,7 @@ import java.util.function.BiConsumer;
 import org.eclipse.emf.ecore.EObject;
 import org.nasdanika.common.Context;
 import org.nasdanika.common.ProgressMonitor;
+import org.nasdanika.common.Util;
 import org.nasdanika.html.HTMLFactory;
 import org.nasdanika.html.Producer;
 import org.nasdanika.models.html.Page;
@@ -23,7 +24,10 @@ public class PageProducer implements Producer<String> {
 		HTMLFactory htmlFactory = context.get(HTMLFactory.class, HTMLFactory.INSTANCE);
 		delegate = htmlFactory.page();
 		delegate.lang(page.getLanguage());
-		delegate.title(page.getName());
+		String pageName = page.getName();
+		if (!Util.isBlank(pageName)) {
+			delegate.title(pageName);
+		}
 		for (String styleseet: page.getStylesheets()) {
 			delegate.stylesheet(styleseet);
 		}
