@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="EN">
   <head>
-    <title>Force Graph</title>
+    <title>Force Graph 3D</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet"/>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -56,12 +56,15 @@
 </script>    
 </head>
   <body>
-    <div tabindex="-1" id="nsd_a5" class="modal">
+    <div tabindex="-1" id="nsd_dj" class="modal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">Hover mouse over nodes elements to display tooltips.
 Double-click on nodes to navigate go documentation.
-Drag to rearrange, nodes will not stay in place once released.
+Left click - rotate.
+Mouse wheel - zoom.
+Right click - pan.
+Drag to rearrange.
 </div>
         </div>
       </div>
@@ -86,9 +89,9 @@ Drag to rearrange, nodes will not stay in place once released.
           <ul class="navbar navbar-light navbar-expand-lg">
             <a href="../../../index.html" data-nsd-label-uuid="fdcfd15e-b49a-4680-893c-950d19317868" class="navbar-brand">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EPackage.gif" class="nsd-app-label-icon"/>html</a>
-            <button type="button" data-toggle="collapse" data-target="#nsd_9w" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            <button type="button" data-toggle="collapse" data-target="#nsd_da" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
             </button>
-            <div id="nsd_9w" class="collapse navbar-collapse">
+            <div id="nsd_da" class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                   <a href="../../../classifiers.html" data-nsd-label-uuid="8c7d6abb-8a86-4083-bd6e-da2e89af5089" class="nav-link">Classifiers</a>
@@ -128,10 +131,10 @@ Drag to rearrange, nodes will not stay in place once released.
 $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel').jstree(function(tree) { tree.state.filter = function(state) { delete state.core.selected; return state; };  tree.search.search_callback = function(searchStr, node) { if (typeof window.nsdJsTreeSearchCallback === 'function') return window.nsdJsTreeSearchCallback(searchStr, node); var sf = new $.vakata.search(searchStr, true, { caseSensitive : false, fuzzy : false }); return sf.search(node.text).isMatch; }; return tree; }({"core":{"data":[{"a_attr":{"onclick":"window.location='../HtmlElement/index.html';"},"data-nsd-label-uuid":"8c428814-18f9-4e3d-aebc-6e655e9b71b6","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"nsd-app-nav-item-70a60a38-e8da-4e02-b70a-a2200da22633","text":"<i>HtmlElement<\/i>","type":"leaf"},{"a_attr":{"onclick":"window.location='index.html';"},"data-nsd-label-uuid":"521f02b0-4066-4c99-bc2e-f444118093cb","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","state":{"selected":true},"id":"nsd-app-nav-item-18b020e6-2c50-4772-8a19-68e2c18f86c6","text":"Page","type":"leaf"},{"a_attr":{"onclick":"window.location='../Script/index.html';"},"data-nsd-label-uuid":"20cbd713-2217-4f46-b58e-838f64d2381e","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"nsd-app-nav-item-0a640f56-6dd6-4de7-a5ab-a10cb655dfa0","text":"Script","type":"leaf"},{"a_attr":{"onclick":"window.location='../ScriptReference/index.html';"},"data-nsd-label-uuid":"895de4ca-b6ad-4130-9902-e970e9e0c647","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"nsd-app-nav-item-8dfd76bc-efc3-4304-9849-c153fd3ecb84","text":"ScriptReference","type":"leaf"},{"a_attr":{"onclick":"window.location='../Stylesheet/index.html';"},"data-nsd-label-uuid":"bc26d383-0eb7-41f8-a104-bce9aabd2092","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"nsd-app-nav-item-7dcc9d17-18f1-4602-989a-8df35c973e7b","text":"Stylesheet","type":"leaf"},{"a_attr":{"onclick":"window.location='../StylesheetReference/index.html';"},"data-nsd-label-uuid":"615e0ac6-bb0f-4bcb-9ee0-f4e3646866b7","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"nsd-app-nav-item-2034e108-89d1-42c0-b446-2b8f9bdfa456","text":"StylesheetReference","type":"leaf"},{"a_attr":{"onclick":"window.location='../Tag/index.html';"},"data-nsd-label-uuid":"1ee79680-a5b4-4d99-a062-0deb2943368a","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"nsd-app-nav-item-dfe3d8f4-1f6a-44d7-8b98-ae1470c4dff4","text":"Tag","type":"leaf"}]},"search":{"show_only_matches":true,"show_only_matches_children":true},"types":{"leaf":{"icon":"jstree-file"}},"plugins":["state","type","search"],"state":{"key":"a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel"}}));
 // Tokens: searchInputSelector, timer, treeSelector
 $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel_searchInput').keyup(function () {
-    if (window['nsd_jstTreeSearchTimer_nsd_a4']) { 
-		clearTimeout(window['nsd_jstTreeSearchTimer_nsd_a4']); 
+    if (window['nsd_jstTreeSearchTimer_nsd_di']) { 
+		clearTimeout(window['nsd_jstTreeSearchTimer_nsd_di']); 
 	}
-    window['nsd_jstTreeSearchTimer_nsd_a4'] = setTimeout(function () {
+    window['nsd_jstTreeSearchTimer_nsd_di'] = setTimeout(function () {
       var v = $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel_searchInput').val();
       $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel').jstree(true).search(v);
     }, 250);
@@ -139,7 +142,7 @@ $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel_searchInput').keyup(fu
 
 });</script>
         </div>
-        <main data-nsd-label-uuid="1688b468-d9e2-4ca2-9eb5-7ca3fb8a5643" data-nsd-action-uris="uuid:1688b468-d9e2-4ca2-9eb5-7ca3fb8a5643" class="col nsd-app-content-panel">
+        <main data-nsd-label-uuid="2daf8f90-59be-4220-b5f9-295e9d156a6f" data-nsd-action-uris="uuid:2daf8f90-59be-4220-b5f9-295e9d156a6f" class="col nsd-app-content-panel">
           <div class="container-fluid">
             <div class="row nsd-app-content-panel-breadcrumb-row">
               <div class="col">
@@ -151,7 +154,7 @@ $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel_searchInput').keyup(fu
                     </li>
                     <li class="breadcrumb-item"><span data-nsd-label-uuid="eab98702-f50f-4138-9f9e-5064c79063de"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/external-diagram-seo-media-dreamstale-lineal-dreamstale.png" class="nsd-app-label-icon"/>Graphs</span>
                     </li>
-                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="1688b468-d9e2-4ca2-9eb5-7ca3fb8a5643">Force Graph</span>
+                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="2daf8f90-59be-4220-b5f9-295e9d156a6f">Force Graph 3D</span>
                     </li>
                   </ol>
                 </nav>
@@ -159,7 +162,7 @@ $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel_searchInput').keyup(fu
             </div>
             <div class="row nsd-app-content-panel-title-and-items-row">
               <div class="col-auto">
-                <H1><span data-nsd-label-uuid="1688b468-d9e2-4ca2-9eb5-7ca3fb8a5643" class="nsd-app-content-panel-title">Force Graph<a data-toggle="modal" data-target="#nsd_a5" href="#" title="A live force-layout graph of this classifier and related classifiers showing relationships between them" style="vertical-align:super;font-size:x-small;margin-left:0.2em"><span class="far fa-question-circle nsd-app-label-icon"></span></a></span>
+                <H1><span data-nsd-label-uuid="2daf8f90-59be-4220-b5f9-295e9d156a6f" class="nsd-app-content-panel-title">Force Graph 3D<a data-toggle="modal" data-target="#nsd_dj" href="#" title="A live force-layout graph of package classifiers showing detailed relationships between them" style="vertical-align:super;font-size:x-small;margin-left:0.2em"><span class="far fa-question-circle nsd-app-label-icon"></span></a></span>
                 </H1>
               </div>
             </div>
@@ -167,34 +170,169 @@ $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel_searchInput').keyup(fu
               <div class="col">
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col"><div id="graph-container-11" class="row" style="height:70vh;width:100%">
+                    <div class="col"><div id="force-graph-12" class="row" style="height:70vh;width:100%">
 </div>
-<script type="text/javascript">
-	$(document).ready(function() {
-		var dom = document.getElementById("graph-container-11");
-		var myChart = echarts.init(dom, null, {
-			render: "canvas",
-			useDirtyRect: false
-		});
-		var option = {"legend":{},"series":[{"type":"graph","emphasis":{"focus":"adjacency"},"data":[{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EDataType.gif","id":"EString@http://www.eclipse.org/emf/2002/Ecore","name":"EString","value":{"externalLink":"https://ecore.models.nasdanika.org/references/eClassifiers/EString/index.html"},"x":360.339958959341,"y":565.952846158196,"category":0},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"ModelElement@ecore://nasdanika.org/core/ncore","name":"ModelElement","value":{"externalLink":"https://ncore.models.nasdanika.org/references/eClassifiers/ModelElement/index.html"},"x":506.38522526298726,"y":369.8796648880118,"category":1},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"Page@ecore://html.models.nasdanika.org","name":"Page","value":{"externalLink":""},"x":604.5349593321042,"y":554.0065489911485,"category":2},{"symbol":"image://https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"EObject@http://www.eclipse.org/emf/2002/Ecore","name":"EObject","value":{"externalLink":"https://ecore.models.nasdanika.org/references/eClassifiers/EObject/index.html"},"x":751.0311266771389,"y":357.6930127207092,"category":0}],"symbolSize":20,"roam":true,"layout":"force","links":[{"source":1,"target":0},{"source":1,"target":2},{"source":1,"target":3},{"source":2,"target":0},{"source":2,"target":1},{"source":2,"target":3},{"source":3,"target":1},{"source":3,"target":2}],"categories":[{"name":"ecore"},{"name":"ncore"},{"name":"html"}],"draggable":true,"label":{"show":true,"position":"right"},"lineStyle":{"color":"source","curveness":0},"force":{"repulsion":200,"gravity":0.1,"edgeLength":200}}]};
-		option.tooltip = {};
-		option.series[0].tooltip = {
-			formatter: function(arg) {
-				return arg.value ? arg.value.description : null;
-			}
-		};
-		myChart.setOption(option);
-		myChart.on("dblclick", function(params) {
-			if (params.value) {
-				if (params.value.link) {
-					window.open(params.value.link, "_self");
-				} else if (params.value.externalLink) {
-					window.open(params.value.externalLink);
+<script type="module">
+	import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
+	import SpriteText from "https://cdn.jsdelivr.net/npm/three-spritetext@1.10.0/dist/three-spritetext.mjs";
+
+	        new ForceGraph3D(
+                document.getElementById('force-graph-12'), 
+                {
+                        extraRenderers: [
+                                new CSS2DRenderer()
+                        ]
+                })
+                .graphData({
+          "nodes": [
+            {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EDataType.gif",
+              "name": "EString",
+              "id": "EString@http://www.eclipse.org/emf/2002/Ecore",
+              "value": [{"externalLink": "https://ecore.models.nasdanika.org/references/eClassifiers/EString/index.html"}],
+              "group": "http://www.eclipse.org/emf/2002/Ecore"
+            },
+            {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif",
+              "size": 4,
+              "name": "ModelElement",
+              "id": "ModelElement@ecore://nasdanika.org/core/ncore",
+              "value": [{"externalLink": "https://ncore.models.nasdanika.org/references/eClassifiers/ModelElement/index.html"}],
+              "group": "ecore://nasdanika.org/core/ncore"
+            },
+            {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif",
+              "size": 5,
+              "name": "Page",
+              "id": "Page@ecore://html.models.nasdanika.org",
+              "value": [{"externalLink": ""}],
+              "group": "ecore://html.models.nasdanika.org"
+            },
+            {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif",
+              "size": 3,
+              "name": "EObject",
+              "id": "EObject@http://www.eclipse.org/emf/2002/Ecore",
+              "value": [{"externalLink": "https://ecore.models.nasdanika.org/references/eClassifiers/EObject/index.html"}],
+              "group": "http://www.eclipse.org/emf/2002/Ecore"
+            }
+          ],
+          "links": [
+            {
+              "rotation": 0,
+              "source": "Page@ecore://html.models.nasdanika.org",
+              "target": "ModelElement@ecore://nasdanika.org/core/ncore",
+              "group": "inheritance",
+              "curvature": 0
+            },
+            {
+              "rotation": 0,
+              "name": "prolog",
+              "source": "Page@ecore://html.models.nasdanika.org",
+              "target": "EObject@http://www.eclipse.org/emf/2002/Ecore",
+              "group": "reference",
+              "curvature": 0.2
+            },
+            {
+              "rotation": 1.2566370614359172,
+              "name": "head",
+              "source": "Page@ecore://html.models.nasdanika.org",
+              "target": "EObject@http://www.eclipse.org/emf/2002/Ecore",
+              "group": "reference",
+              "curvature": 0.2
+            },
+            {
+              "rotation": 2.5132741228718345,
+              "name": "body",
+              "source": "Page@ecore://html.models.nasdanika.org",
+              "target": "EObject@http://www.eclipse.org/emf/2002/Ecore",
+              "group": "reference",
+              "curvature": 0.2
+            },
+            {
+              "rotation": 3.7699111843077517,
+              "name": "epilog",
+              "source": "Page@ecore://html.models.nasdanika.org",
+              "target": "EObject@http://www.eclipse.org/emf/2002/Ecore",
+              "group": "reference",
+              "curvature": 0.2
+            },
+            {
+              "rotation": 5.026548245743669,
+              "name": "builders",
+              "source": "Page@ecore://html.models.nasdanika.org",
+              "target": "EObject@http://www.eclipse.org/emf/2002/Ecore",
+              "group": "reference",
+              "curvature": 0.2
+            },
+            {
+              "rotation": 0,
+              "name": "labelPrototype",
+              "source": "ModelElement@ecore://nasdanika.org/core/ncore",
+              "target": "EObject@http://www.eclipse.org/emf/2002/Ecore",
+              "group": "reference",
+              "curvature": 0
+            }
+          ]
+        })
+                .nodeAutoColorBy('group')
+                .nodeVal('size')
+                .linkDirectionalArrowLength(2.5)
+                .linkDirectionalArrowRelPos(1)
+                .linkCurvature('curvature')
+                .linkCurveRotation('rotation')
+                .linkAutoColorBy('group')
+                .onNodeClick((node, event) => {
+       if (node.lastClick) {
+        if (event.timeStamp - node.lastClick < 500) {
+			if (Array.isArray(node.value) && node.value.length > 0) {
+				if (node.value[0].link) {
+					window.open(node.value[0].link, "_self");
+				} else if (node.value[0].externalLink) {
+					window.open(node.value[0].externalLink);
 				}
 			}
-		});
-		window.addEventListener("resize", myChart.resize);
-	});
+			delete node.lastClick;
+		} else {
+			node.lastClick = event.timeStamp;
+		}
+	} else {
+		node.lastClick = event.timeStamp;
+	}
+   })
+                .nodeThreeObject(node => {
+        const nodeEl = document.createElement('div');
+        nodeEl.textContent = node.name;
+        nodeEl.style.color = node.color;
+        nodeEl.className = 'node-label';
+        return new CSS2DObject(nodeEl);
+      })
+                .nodeThreeObjectExtend(true)
+                .linkThreeObject(link => {
+         // extend link with text sprite
+         if (link.name && !link.curvature) {
+           const sprite = new SpriteText(link.name);
+           sprite.color = 'lightgrey';
+           sprite.textHeight = 1.5;
+           return sprite;
+         }
+       })
+                .linkPositionUpdate((sprite, { start, end }) => {
+		if (sprite) {
+          const pos = Object.assign(...['x', 'y', 'z'].map(c => ({
+            [c]: start[c] + (end[c] - start[c]) / 1.3
+          })));
+
+          // Position sprite
+          Object.assign(sprite.position, pos);
+        }
+       })
+                .linkThreeObjectExtend(true)
+                .onNodeDragEnd(node => {
+          node.fx = node.x;
+          node.fy = node.y;
+          node.fz = node.z;
+        })
 </script>
 </div>
                   </div>

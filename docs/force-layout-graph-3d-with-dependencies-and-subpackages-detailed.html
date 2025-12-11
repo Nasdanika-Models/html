@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="EN">
   <head>
-    <title>Force Graph 3D</title>
+    <title>Force Graph 3D Detailed</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootswatch/4.5.2/cerulean/bootstrap.min.css" id="nsd-bootstrap-theme-stylesheet"/>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
@@ -56,7 +56,7 @@
 </script>    
 </head>
   <body>
-    <div tabindex="-1" id="nsd_af" class="modal">
+    <div tabindex="-1" id="nsd_qk" class="modal">
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-body">Hover mouse over nodes elements to display tooltips.
@@ -89,9 +89,9 @@ Drag to rearrange.
           <ul class="navbar navbar-light navbar-expand-lg">
             <a href="index.html" data-nsd-label-uuid="fdcfd15e-b49a-4680-893c-950d19317868" class="navbar-brand">
               <img src="https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EPackage.gif" class="nsd-app-label-icon"/>html</a>
-            <button type="button" data-toggle="collapse" data-target="#nsd_a6" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
+            <button type="button" data-toggle="collapse" data-target="#nsd_qb" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span>
             </button>
-            <div id="nsd_a6" class="collapse navbar-collapse">
+            <div id="nsd_qb" class="collapse navbar-collapse">
               <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                   <a href="classifiers.html" data-nsd-label-uuid="8c7d6abb-8a86-4083-bd6e-da2e89af5089" class="nav-link">Classifiers</a>
@@ -112,8 +112,8 @@ Drag to rearrange.
                       <div title="With dependencies and sub-packages" class="dropdown-divider"></div>
                       <a href="default-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="3c088f70-c194-4cca-8f2e-2d6f8b2ed70a" class="dropdown-item">Default Graph</a>
                       <a href="circular-layout-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="649ca2e7-af3c-4f2c-b999-64bec95b7c71" class="dropdown-item">Circular Graph</a>
-                      <a href="force-layout-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="c43b5c82-8c18-4a3f-b91f-c84c886f1a11" class="dropdown-item">Force Graph</a><span data-nsd-label-uuid="48b9b690-f21a-4974-bd08-82c9cec75bf7" class="active dropdown-item">Force Graph 3D</span>
-                      <a href="force-layout-graph-3d-with-dependencies-and-subpackages-detailed.html" data-nsd-label-uuid="5e91aa4f-ae72-43ea-9a89-bba0add46f83" class="dropdown-item">Force Graph 3D Detailed</a>
+                      <a href="force-layout-graph-with-dependencies-and-subpackages.html" data-nsd-label-uuid="c43b5c82-8c18-4a3f-b91f-c84c886f1a11" class="dropdown-item">Force Graph</a>
+                      <a href="force-layout-graph-3d-with-dependencies-and-subpackages.html" data-nsd-label-uuid="48b9b690-f21a-4974-bd08-82c9cec75bf7" class="dropdown-item">Force Graph 3D</a><span data-nsd-label-uuid="5e91aa4f-ae72-43ea-9a89-bba0add46f83" class="active dropdown-item">Force Graph 3D Detailed</span>
                     </div>
                   </li>
                 </li>
@@ -130,10 +130,10 @@ Drag to rearrange.
 $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel').jstree(function(tree) { tree.state.filter = function(state) { delete state.core.selected; return state; };  tree.search.search_callback = function(searchStr, node) { if (typeof window.nsdJsTreeSearchCallback === 'function') return window.nsdJsTreeSearchCallback(searchStr, node); var sf = new $.vakata.search(searchStr, true, { caseSensitive : false, fuzzy : false }); return sf.search(node.text).isMatch; }; return tree; }({"core":{"data":[{"a_attr":{"onclick":"window.location='references/eClassifiers/HtmlElement/index.html';"},"data-nsd-label-uuid":"8c428814-18f9-4e3d-aebc-6e655e9b71b6","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"nsd-app-nav-item-70a60a38-e8da-4e02-b70a-a2200da22633","text":"<i>HtmlElement<\/i>","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Page/index.html';"},"data-nsd-label-uuid":"521f02b0-4066-4c99-bc2e-f444118093cb","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"nsd-app-nav-item-18b020e6-2c50-4772-8a19-68e2c18f86c6","text":"Page","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Script/index.html';"},"data-nsd-label-uuid":"20cbd713-2217-4f46-b58e-838f64d2381e","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"nsd-app-nav-item-0a640f56-6dd6-4de7-a5ab-a10cb655dfa0","text":"Script","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/ScriptReference/index.html';"},"data-nsd-label-uuid":"895de4ca-b6ad-4130-9902-e970e9e0c647","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"nsd-app-nav-item-8dfd76bc-efc3-4304-9849-c153fd3ecb84","text":"ScriptReference","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Stylesheet/index.html';"},"data-nsd-label-uuid":"bc26d383-0eb7-41f8-a104-bce9aabd2092","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"nsd-app-nav-item-7dcc9d17-18f1-4602-989a-8df35c973e7b","text":"Stylesheet","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/StylesheetReference/index.html';"},"data-nsd-label-uuid":"615e0ac6-bb0f-4bcb-9ee0-f4e3646866b7","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"nsd-app-nav-item-2034e108-89d1-42c0-b446-2b8f9bdfa456","text":"StylesheetReference","type":"leaf"},{"a_attr":{"onclick":"window.location='references/eClassifiers/Tag/index.html';"},"data-nsd-label-uuid":"1ee79680-a5b4-4d99-a062-0deb2943368a","icon":"https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif","id":"nsd-app-nav-item-dfe3d8f4-1f6a-44d7-8b98-ae1470c4dff4","text":"Tag","type":"leaf"}]},"search":{"show_only_matches":true,"show_only_matches_children":true},"types":{"leaf":{"icon":"jstree-file"}},"plugins":["state","type","search"],"state":{"key":"a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel"}}));
 // Tokens: searchInputSelector, timer, treeSelector
 $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel_searchInput').keyup(function () {
-    if (window['nsd_jstTreeSearchTimer_nsd_ae']) { 
-		clearTimeout(window['nsd_jstTreeSearchTimer_nsd_ae']); 
+    if (window['nsd_jstTreeSearchTimer_nsd_qj']) { 
+		clearTimeout(window['nsd_jstTreeSearchTimer_nsd_qj']); 
 	}
-    window['nsd_jstTreeSearchTimer_nsd_ae'] = setTimeout(function () {
+    window['nsd_jstTreeSearchTimer_nsd_qj'] = setTimeout(function () {
       var v = $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel_searchInput').val();
       $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel').jstree(true).search(v);
     }, 250);
@@ -141,7 +141,7 @@ $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel_searchInput').keyup(fu
 
 });</script>
         </div>
-        <main data-nsd-label-uuid="48b9b690-f21a-4974-bd08-82c9cec75bf7" data-nsd-action-uris="uuid:48b9b690-f21a-4974-bd08-82c9cec75bf7" class="col nsd-app-content-panel">
+        <main data-nsd-label-uuid="5e91aa4f-ae72-43ea-9a89-bba0add46f83" data-nsd-action-uris="uuid:5e91aa4f-ae72-43ea-9a89-bba0add46f83" class="col nsd-app-content-panel">
           <div class="container-fluid">
             <div class="row nsd-app-content-panel-breadcrumb-row">
               <div class="col">
@@ -149,7 +149,7 @@ $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel_searchInput').keyup(fu
                   <ol class="breadcrumb">
                     <li class="breadcrumb-item"><span data-nsd-label-uuid="1778738f-e24d-4fd3-8abc-8dee9df8d3f9"><img src="https://img.icons8.com/external-dreamstale-lineal-dreamstale/16/external-diagram-seo-media-dreamstale-lineal-dreamstale.png" class="nsd-app-label-icon"/>Graphs</span>
                     </li>
-                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="48b9b690-f21a-4974-bd08-82c9cec75bf7">Force Graph 3D</span>
+                    <li class="breadcrumb-item active"><span data-nsd-label-uuid="5e91aa4f-ae72-43ea-9a89-bba0add46f83">Force Graph 3D Detailed</span>
                     </li>
                   </ol>
                 </nav>
@@ -157,7 +157,7 @@ $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel_searchInput').keyup(fu
             </div>
             <div class="row nsd-app-content-panel-title-and-items-row">
               <div class="col-auto">
-                <H1><span data-nsd-label-uuid="48b9b690-f21a-4974-bd08-82c9cec75bf7" class="nsd-app-content-panel-title">Force Graph 3D<a data-toggle="modal" data-target="#nsd_af" href="#" title="A live force-layout graph of package classifiers showing relationships between them" style="vertical-align:super;font-size:x-small;margin-left:0.2em"><span class="far fa-question-circle nsd-app-label-icon"></span></a></span>
+                <H1><span data-nsd-label-uuid="5e91aa4f-ae72-43ea-9a89-bba0add46f83" class="nsd-app-content-panel-title">Force Graph 3D Detailed<a data-toggle="modal" data-target="#nsd_qk" href="#" title="A live force-layout graph of package classifiers showing detailed relationships between them" style="vertical-align:super;font-size:x-small;margin-left:0.2em"><span class="far fa-question-circle nsd-app-label-icon"></span></a></span>
                 </H1>
               </div>
             </div>
@@ -165,14 +165,14 @@ $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel_searchInput').keyup(fu
               <div class="col">
                 <div class="container-fluid">
                   <div class="row">
-                    <div class="col"><div id="force-graph37" class="row" style="height:70vh;width:100%">
+                    <div class="col"><div id="force-graph-38" class="row" style="height:70vh;width:100%">
 </div>
 <script type="module">
 	import { CSS2DRenderer, CSS2DObject } from 'three/addons/renderers/CSS2DRenderer.js';
 	import SpriteText from "https://cdn.jsdelivr.net/npm/three-spritetext@1.10.0/dist/three-spritetext.mjs";
 
 	        new ForceGraph3D(
-                document.getElementById('force-graph37'), 
+                document.getElementById('force-graph-38'), 
                 {
                         extraRenderers: [
                                 new CSS2DRenderer()
@@ -181,281 +181,236 @@ $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel_searchInput').keyup(fu
                 .graphData({
           "nodes": [
             {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EDataType.gif",
               "name": "EString",
               "id": "EString@http://www.eclipse.org/emf/2002/Ecore",
               "value": [{"externalLink": "https://ecore.models.nasdanika.org/references/eClassifiers/EString/index.html"}],
-              "group": "ecore"
+              "group": "http://www.eclipse.org/emf/2002/Ecore"
             },
             {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif",
+              "size": 4,
               "name": "ModelElement",
               "id": "ModelElement@ecore://nasdanika.org/core/ncore",
               "value": [{"externalLink": "https://ncore.models.nasdanika.org/references/eClassifiers/ModelElement/index.html"}],
-              "group": "ncore"
+              "group": "ecore://nasdanika.org/core/ncore"
             },
             {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif",
+              "size": 5,
               "name": "Page",
               "id": "Page@ecore://html.models.nasdanika.org",
               "value": [{"externalLink": "references/eClassifiers/Page/index.html"}],
-              "group": "html"
+              "group": "ecore://html.models.nasdanika.org"
             },
             {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif",
+              "size": 3,
               "name": "EObject",
               "id": "EObject@http://www.eclipse.org/emf/2002/Ecore",
               "value": [{"externalLink": "https://ecore.models.nasdanika.org/references/eClassifiers/EObject/index.html"}],
-              "group": "ecore"
+              "group": "http://www.eclipse.org/emf/2002/Ecore"
             },
             {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif",
+              "size": 3,
               "name": "Tag",
               "id": "Tag@ecore://html.models.nasdanika.org",
               "value": [{"externalLink": "references/eClassifiers/Tag/index.html"}],
-              "group": "html"
+              "group": "ecore://html.models.nasdanika.org"
             },
             {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif",
+              "size": 3,
               "name": "HtmlElement",
               "id": "HtmlElement@ecore://html.models.nasdanika.org",
               "value": [{"externalLink": "references/eClassifiers/HtmlElement/index.html"}],
-              "group": "html"
+              "group": "ecore://html.models.nasdanika.org"
             },
             {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif",
+              "size": 3,
               "name": "Stylesheet",
               "id": "Stylesheet@ecore://html.models.nasdanika.org",
               "value": [{"externalLink": "references/eClassifiers/Stylesheet/index.html"}],
-              "group": "html"
+              "group": "ecore://html.models.nasdanika.org"
             },
             {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif",
+              "size": 3,
               "name": "Filter",
               "id": "Filter@ecore://nasdanika.org/core/exec/content",
               "value": [{"externalLink": "https://exec.models.nasdanika.org/references/eSubpackages/content/references/eClassifiers/Filter/index.html"}],
-              "group": "content"
+              "group": "ecore://nasdanika.org/core/exec/content"
             },
             {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif",
+              "size": 3,
               "name": "Property",
               "id": "Property@ecore://nasdanika.org/core/exec",
               "value": [{"externalLink": "https://exec.models.nasdanika.org/references/eClassifiers/Property/index.html"}],
-              "group": "exec"
+              "group": "ecore://nasdanika.org/core/exec"
             },
             {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif",
+              "size": 3,
               "name": "StylesheetReference",
               "id": "StylesheetReference@ecore://html.models.nasdanika.org",
               "value": [{"externalLink": "references/eClassifiers/StylesheetReference/index.html"}],
-              "group": "html"
+              "group": "ecore://html.models.nasdanika.org"
             },
             {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif",
+              "size": 3,
               "name": "ScriptReference",
               "id": "ScriptReference@ecore://html.models.nasdanika.org",
               "value": [{"externalLink": "references/eClassifiers/ScriptReference/index.html"}],
-              "group": "html"
+              "group": "ecore://html.models.nasdanika.org"
             },
             {
+              "image": "https://cdn.jsdelivr.net/gh/Nasdanika-Models/ecore@master/graph/web-resources/icons/EClass.gif",
+              "size": 3,
               "name": "Script",
               "id": "Script@ecore://html.models.nasdanika.org",
               "value": [{"externalLink": "references/eClassifiers/Script/index.html"}],
-              "group": "html"
+              "group": "ecore://html.models.nasdanika.org"
             }
           ],
           "links": [
             {
               "rotation": 0,
-              "source": "ModelElement@ecore://nasdanika.org/core/ncore",
-              "target": "EString@http://www.eclipse.org/emf/2002/Ecore",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "ModelElement@ecore://nasdanika.org/core/ncore",
-              "target": "Page@ecore://html.models.nasdanika.org",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "ModelElement@ecore://nasdanika.org/core/ncore",
-              "target": "EObject@http://www.eclipse.org/emf/2002/Ecore",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "ModelElement@ecore://nasdanika.org/core/ncore",
-              "target": "HtmlElement@ecore://html.models.nasdanika.org",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "ModelElement@ecore://nasdanika.org/core/ncore",
-              "target": "Filter@ecore://nasdanika.org/core/exec/content",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "ModelElement@ecore://nasdanika.org/core/ncore",
-              "target": "StylesheetReference@ecore://html.models.nasdanika.org",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "ModelElement@ecore://nasdanika.org/core/ncore",
-              "target": "ScriptReference@ecore://html.models.nasdanika.org",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "Page@ecore://html.models.nasdanika.org",
-              "target": "EString@http://www.eclipse.org/emf/2002/Ecore",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
               "source": "Page@ecore://html.models.nasdanika.org",
               "target": "ModelElement@ecore://nasdanika.org/core/ncore",
+              "group": "inheritance",
               "curvature": 0
             },
             {
               "rotation": 0,
+              "name": "prolog",
               "source": "Page@ecore://html.models.nasdanika.org",
               "target": "EObject@http://www.eclipse.org/emf/2002/Ecore",
+              "group": "reference",
+              "curvature": 0.2
+            },
+            {
+              "rotation": 1.2566370614359172,
+              "name": "head",
+              "source": "Page@ecore://html.models.nasdanika.org",
+              "target": "EObject@http://www.eclipse.org/emf/2002/Ecore",
+              "group": "reference",
+              "curvature": 0.2
+            },
+            {
+              "rotation": 2.5132741228718345,
+              "name": "body",
+              "source": "Page@ecore://html.models.nasdanika.org",
+              "target": "EObject@http://www.eclipse.org/emf/2002/Ecore",
+              "group": "reference",
+              "curvature": 0.2
+            },
+            {
+              "rotation": 3.7699111843077517,
+              "name": "epilog",
+              "source": "Page@ecore://html.models.nasdanika.org",
+              "target": "EObject@http://www.eclipse.org/emf/2002/Ecore",
+              "group": "reference",
+              "curvature": 0.2
+            },
+            {
+              "rotation": 5.026548245743669,
+              "name": "builders",
+              "source": "Page@ecore://html.models.nasdanika.org",
+              "target": "EObject@http://www.eclipse.org/emf/2002/Ecore",
+              "group": "reference",
+              "curvature": 0.2
+            },
+            {
+              "rotation": 0,
+              "name": "labelPrototype",
+              "source": "ModelElement@ecore://nasdanika.org/core/ncore",
+              "target": "EObject@http://www.eclipse.org/emf/2002/Ecore",
+              "group": "reference",
               "curvature": 0
             },
             {
               "rotation": 0,
-              "source": "EObject@http://www.eclipse.org/emf/2002/Ecore",
+              "source": "HtmlElement@ecore://html.models.nasdanika.org",
               "target": "ModelElement@ecore://nasdanika.org/core/ncore",
+              "group": "inheritance",
               "curvature": 0
             },
             {
               "rotation": 0,
-              "source": "EObject@http://www.eclipse.org/emf/2002/Ecore",
-              "target": "Page@ecore://html.models.nasdanika.org",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "EObject@http://www.eclipse.org/emf/2002/Ecore",
-              "target": "HtmlElement@ecore://html.models.nasdanika.org",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "EObject@http://www.eclipse.org/emf/2002/Ecore",
-              "target": "Filter@ecore://nasdanika.org/core/exec/content",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "EObject@http://www.eclipse.org/emf/2002/Ecore",
-              "target": "Property@ecore://nasdanika.org/core/exec",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "Tag@ecore://html.models.nasdanika.org",
-              "target": "EString@http://www.eclipse.org/emf/2002/Ecore",
+              "name": "content",
+              "source": "HtmlElement@ecore://html.models.nasdanika.org",
+              "target": "EObject@http://www.eclipse.org/emf/2002/Ecore",
+              "group": "reference",
               "curvature": 0
             },
             {
               "rotation": 0,
               "source": "Tag@ecore://html.models.nasdanika.org",
               "target": "HtmlElement@ecore://html.models.nasdanika.org",
+              "group": "inheritance",
               "curvature": 0
             },
             {
               "rotation": 0,
-              "source": "HtmlElement@ecore://html.models.nasdanika.org",
+              "source": "Filter@ecore://nasdanika.org/core/exec/content",
               "target": "ModelElement@ecore://nasdanika.org/core/ncore",
+              "group": "inheritance",
               "curvature": 0
             },
             {
               "rotation": 0,
-              "source": "HtmlElement@ecore://html.models.nasdanika.org",
-              "target": "Tag@ecore://html.models.nasdanika.org",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "HtmlElement@ecore://html.models.nasdanika.org",
+              "name": "source",
+              "source": "Filter@ecore://nasdanika.org/core/exec/content",
               "target": "EObject@http://www.eclipse.org/emf/2002/Ecore",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "HtmlElement@ecore://html.models.nasdanika.org",
-              "target": "Property@ecore://nasdanika.org/core/exec",
+              "group": "reference",
               "curvature": 0
             },
             {
               "rotation": 0,
               "source": "Stylesheet@ecore://html.models.nasdanika.org",
               "target": "Filter@ecore://nasdanika.org/core/exec/content",
+              "group": "inheritance",
               "curvature": 0
             },
             {
               "rotation": 0,
-              "source": "Filter@ecore://nasdanika.org/core/exec/content",
-              "target": "ModelElement@ecore://nasdanika.org/core/ncore",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "Filter@ecore://nasdanika.org/core/exec/content",
-              "target": "EObject@http://www.eclipse.org/emf/2002/Ecore",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "Filter@ecore://nasdanika.org/core/exec/content",
-              "target": "Stylesheet@ecore://html.models.nasdanika.org",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "Filter@ecore://nasdanika.org/core/exec/content",
-              "target": "Script@ecore://html.models.nasdanika.org",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "Property@ecore://nasdanika.org/core/exec",
-              "target": "EString@http://www.eclipse.org/emf/2002/Ecore",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
+              "name": "value",
               "source": "Property@ecore://nasdanika.org/core/exec",
               "target": "EObject@http://www.eclipse.org/emf/2002/Ecore",
+              "group": "reference",
               "curvature": 0
             },
             {
               "rotation": 0,
-              "source": "Property@ecore://nasdanika.org/core/exec",
-              "target": "HtmlElement@ecore://html.models.nasdanika.org",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "StylesheetReference@ecore://html.models.nasdanika.org",
-              "target": "EString@http://www.eclipse.org/emf/2002/Ecore",
+              "name": "attributes",
+              "source": "HtmlElement@ecore://html.models.nasdanika.org",
+              "target": "Property@ecore://nasdanika.org/core/exec",
+              "group": "reference",
               "curvature": 0
             },
             {
               "rotation": 0,
               "source": "StylesheetReference@ecore://html.models.nasdanika.org",
               "target": "ModelElement@ecore://nasdanika.org/core/ncore",
-              "curvature": 0
-            },
-            {
-              "rotation": 0,
-              "source": "ScriptReference@ecore://html.models.nasdanika.org",
-              "target": "EString@http://www.eclipse.org/emf/2002/Ecore",
+              "group": "inheritance",
               "curvature": 0
             },
             {
               "rotation": 0,
               "source": "ScriptReference@ecore://html.models.nasdanika.org",
               "target": "ModelElement@ecore://nasdanika.org/core/ncore",
+              "group": "inheritance",
               "curvature": 0
             },
             {
               "rotation": 0,
               "source": "Script@ecore://html.models.nasdanika.org",
               "target": "Filter@ecore://nasdanika.org/core/exec/content",
+              "group": "inheritance",
               "curvature": 0
             }
           ]
@@ -466,6 +421,7 @@ $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel_searchInput').keyup(fu
                 .linkDirectionalArrowRelPos(1)
                 .linkCurvature('curvature')
                 .linkCurveRotation('rotation')
+                .linkAutoColorBy('group')
                 .onNodeClick((node, event) => {
        if (node.lastClick) {
         if (event.timeStamp - node.lastClick < 500) {
@@ -492,6 +448,26 @@ $('#a3203f6a-2640-4662-8a1f-4146c2d15c66-navigation-panel_searchInput').keyup(fu
         return new CSS2DObject(nodeEl);
       })
                 .nodeThreeObjectExtend(true)
+                .linkThreeObject(link => {
+         // extend link with text sprite
+         if (link.name && !link.curvature) {
+           const sprite = new SpriteText(link.name);
+           sprite.color = 'lightgrey';
+           sprite.textHeight = 1.5;
+           return sprite;
+         }
+       })
+                .linkPositionUpdate((sprite, { start, end }) => {
+		if (sprite) {
+          const pos = Object.assign(...['x', 'y', 'z'].map(c => ({
+            [c]: start[c] + (end[c] - start[c]) / 1.3
+          })));
+
+          // Position sprite
+          Object.assign(sprite.position, pos);
+        }
+       })
+                .linkThreeObjectExtend(true)
                 .onNodeDragEnd(node => {
           node.fx = node.x;
           node.fy = node.y;
